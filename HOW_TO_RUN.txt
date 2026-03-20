@@ -1,0 +1,14 @@
+STEP 1 — Extract this ZIP to C:\
+       You will get C:\CardioSense folder
+
+STEP 2 — Copy your Cardio.csv into
+       C:\CardioSense\
+
+STEP 3 — Open CMD and type:
+       cd C:\CardioSense
+       pip install flask
+       python app.py
+
+STEP 4 — Open Chrome:
+       Patient Dashboard → http://127.0.0.1:5000
+       Doctor Panel      → http://127.0.0.1:5000/doctor

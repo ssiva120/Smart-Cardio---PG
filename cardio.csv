@@ -1,0 +1,251 @@
+Patient_ID,Age,Gender,Heart_Rate,BP_Systolic,BP_Diastolic,Cholesterol_Level,Doctor_Feedback,Sentiment,Alert_Level
+1001,43,Male,116,145,69,186,"Cholesterol levels high, recommend lifestyle changes.",CONCERNING,⚠️ NURSE REVIEW
+1002,76,Female,86,160,82,185,"Patient in good health, maintain diet and exercise.",NORMAL,✅ ALL GOOD
+1003,60,Male,112,136,78,256,Patient is recovering well with no complications.,NORMAL,✅ ALL GOOD
+1004,61,Male,115,168,89,265,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1005,65,Male,61,120,101,243,Patient's condition is stable; monitor regularly.,NORMAL,✅ ALL GOOD
+1006,32,Male,97,124,60,266,No significant changes observed; maintain current regimen.,NORMAL,✅ ALL GOOD
+1007,65,Female,73,156,117,242,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1008,53,Male,88,154,63,277,Routine check-up completed; no immediate concerns,NORMAL,✅ ALL GOOD
+1009,77,Female,118,136,115,262,Treatment effective; patient shows significant improvement.,NORMAL,✅ ALL GOOD
+1010,47,Male,104,126,112,278,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1011,59,Male,120,100,76,204,Vitals are stable; continue current medication,NORMAL,✅ ALL GOOD
+1012,34,Male,92,159,100,231,Patient's condition is stable; monitor regularly.,NORMAL,✅ ALL GOOD
+1013,65,Male,91,128,71,275,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1014,51,Female,90,146,72,154,No significant changes observed; maintain current regimen.,NORMAL,✅ ALL GOOD
+1015,59,Female,95,153,69,259,"Patient in good health, maintain diet and exercise.",NORMAL,✅ ALL GOOD
+1016,34,Female,72,122,99,283,"Cholesterol levels high, recommend lifestyle changes.",CONCERNING,⚠️ NURSE REVIEW
+1017,67,Male,69,161,95,287,Patient is recovering well with no complications.,NORMAL,✅ ALL GOOD
+1018,72,Male,66,121,100,188,Treatment effective; patient shows significant improvement.,NORMAL,✅ ALL GOOD
+1019,58,Male,91,173,100,281,Vitals are stable; continue current medication,NORMAL,✅ ALL GOOD
+1020,33,Female,120,123,78,200,Patient's condition is stable; monitor regularly.,NORMAL,✅ ALL GOOD
+1021,60,Female,62,152,92,267,No significant changes observed; maintain current regimen.,NORMAL,✅ ALL GOOD
+1022,80,Female,69,140,69,284,"Cholesterol levels high, recommend lifestyle changes.",CONCERNING,⚠️ NURSE REVIEW
+1023,79,Male,90,131,107,291,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1024,53,Female,60,107,66,243,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1025,36,Female,103,102,87,245,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1026,77,Female,83,121,105,242,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1027,65,Male,87,143,120,285,Patient is recovering well with no complications.,NORMAL,✅ ALL GOOD
+1028,72,Male,120,111,111,167,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1029,73,Male,83,100,92,294,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1030,66,Male,81,170,74,300,Treatment effective; patient shows significant improvement.,NORMAL,✅ ALL GOOD
+1031,75,Male,100,115,79,197,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1032,69,Male,89,121,67,277,No significant changes observed; maintain current regimen.,NORMAL,✅ ALL GOOD
+1033,59,Male,91,178,112,231,"Patient in good health, maintain diet and exercise.",NORMAL,✅ ALL GOOD
+1034,39,Male,108,145,93,168,"Patient in good health, maintain diet and exercise.",NORMAL,✅ ALL GOOD
+1035,34,Female,104,162,104,157,Routine check-up completed; no immediate concerns,NORMAL,✅ ALL GOOD
+1036,48,Female,65,173,63,193,"Cholesterol levels high, recommend lifestyle changes.",CONCERNING,⚠️ NURSE REVIEW
+1037,75,Female,60,102,81,166,Vitals are stable; continue current medication,NORMAL,✅ ALL GOOD
+1038,30,Male,75,159,104,231,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1039,80,Female,104,175,115,217,No significant changes observed; maintain current regimen.,NORMAL,✅ ALL GOOD
+1040,57,Female,91,102,100,198,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1041,76,Female,67,123,63,280,"Patient in good health, maintain diet and exercise.",NORMAL,✅ ALL GOOD
+1042,74,Female,103,179,89,261,Treatment effective; patient shows significant improvement.,NORMAL,✅ ALL GOOD
+1043,74,Male,70,104,61,233,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1044,44,Male,73,165,63,243," chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1045,62,Male,90,115,82,288,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1046,51,Female,79,141,73,296,Patient is recovering well with no complications.,NORMAL,✅ ALL GOOD
+1047,47,Female,66,149,106,226,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1048,70,Female,96,123,72,160,Patient's condition is stable; monitor regularly.,NORMAL,✅ ALL GOOD
+1049,71,Female,88,139,96,232,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1050,73,Female,118,118,64,267,"Cholesterol levels high, recommend lifestyle changes.",CONCERNING,⚠️ NURSE REVIEW
+1051,53,Female,69,136,91,182,Vitals are stable; continue current medication,NORMAL,✅ ALL GOOD
+1052,71,Male,103,151,70,244,Routine check-up completed; no immediate concerns,NORMAL,✅ ALL GOOD
+1053,36,Female,108,165,90,292,Patient's condition is stable; monitor regularly.,NORMAL,✅ ALL GOOD
+1054,78,Female,114,122,112,203,No significant changes observed; maintain current regimen.,NORMAL,✅ ALL GOOD
+1055,38,Male,66,178,89,257,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1056,59,Female,72,133,88,197,"Cholesterol levels high, recommend lifestyle changes.",CONCERNING,⚠️ NURSE REVIEW
+1057,61,Female,72,162,63,277,Routine check-up completed; no immediate concerns,NORMAL,✅ ALL GOOD
+1058,61,Female,74,132,69,273,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1059,36,Female,119,122,87,272,"Cholesterol levels high, recommend lifestyle changes.",CONCERNING,⚠️ NURSE REVIEW
+1060,58,Female,93,137,96,266,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1061,46,Female,69,114,102,173,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1062,33,Female,92,165,68,293,Patient is recovering well with no complications.,NORMAL,✅ ALL GOOD
+1063,79,Female,73,104,97,267,Routine check-up completed; no immediate concerns,NORMAL,✅ ALL GOOD
+1064,49,Male,112,177,99,183,Patient's condition is stable; monitor regularly.,NORMAL,✅ ALL GOOD
+1065,62,Male,61,117,99,235,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1066,77,Female,102,129,119,154,Treatment effective; patient shows significant improvement.,NORMAL,✅ ALL GOOD
+1067,67,Female,81,113,79,194,No significant changes observed; maintain current regimen.,NORMAL,✅ ALL GOOD
+1068,62,Male,100,142,114,214,Patient is recovering well with no complications.,NORMAL,✅ ALL GOOD
+1069,72,Male,72,100,65,177,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1070,59,Male,74,166,68,274,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1071,51,Female,60,108,64,173,"Cholesterol levels high, recommend lifestyle changes.",CONCERNING,⚠️ NURSE REVIEW
+1072,40,Female,80,171,104,204,Vitals are stable; continue current medication,NORMAL,✅ ALL GOOD
+1073,56,Male,103,119,90,185,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1074,71,Male,72,119,108,270,"Cholesterol levels high, recommend lifestyle changes.",CONCERNING,⚠️ NURSE REVIEW
+1075,55,Male,63,151,89,173,Patient's condition is stable; monitor regularly.,NORMAL,✅ ALL GOOD
+1076,33,Female,108,113,94,224,"Cholesterol levels high, recommend lifestyle changes.",CONCERNING,⚠️ NURSE REVIEW
+1077,31,Female,90,148,75,222,Treatment effective; patient shows significant improvement.,NORMAL,✅ ALL GOOD
+1078,76,Male,85,178,63,245,Patient is recovering well with no complications.,NORMAL,✅ ALL GOOD
+1079,78,Male,91,161,117,263,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1080,34,Male,86,145,105,162,Vitals are stable; continue current medication,NORMAL,✅ ALL GOOD
+1081,76,Female,69,180,76,226,"Cholesterol levels high, recommend lifestyle changes.",CONCERNING,⚠️ NURSE REVIEW
+1082,42,Male,65,170,82,241,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1083,35,Female,78,109,73,296,Patient is recovering well with no complications.,NORMAL,✅ ALL GOOD
+1084,55,Male,116,179,104,203,Treatment effective; patient shows significant improvement.,NORMAL,✅ ALL GOOD
+1085,59,Female,88,111,79,267,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1086,54,Female,74,139,104,275,Patient's condition is stable; monitor regularly.,NORMAL,✅ ALL GOOD
+1087,79,Male,106,141,98,287,Vitals are stable; continue current medication,NORMAL,✅ ALL GOOD
+1088,68,Male,79,163,108,269,Patient is recovering well with no complications.,NORMAL,✅ ALL GOOD
+1089,74,Male,115,153,61,286,Treatment effective; patient shows significant improvement.,NORMAL,✅ ALL GOOD
+1090,64,Female,104,160,93,281,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1091,51,Female,91,126,117,205,Vitals are stable; continue current medication,NORMAL,✅ ALL GOOD
+1092,42,Female,108,167,120,170,Patient is recovering well with no complications.,NORMAL,✅ ALL GOOD
+1093,79,Male,91,124,83,186,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1094,43,Male,115,117,96,197,Treatment effective; patient shows significant improvement.,NORMAL,✅ ALL GOOD
+1095,73,Male,101,101,83,235,"Patient in good health, maintain diet and exercise.",NORMAL,✅ ALL GOOD
+1096,42,Male,68,174,70,186,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1097,69,Male,108,156,95,216,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1098,66,Male,68,156,100,242,"Cholesterol levels high, recommend lifestyle changes.",CONCERNING,⚠️ NURSE REVIEW
+1099,53,Female,94,148,73,169,Routine check-up completed; no immediate concerns,NORMAL,✅ ALL GOOD
+1100,78,Female,83,170,63,181,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1101,62,Male,88,126,76,207,No significant changes observed; maintain current regimen.,NORMAL,✅ ALL GOOD
+1102,71,Female,73,126,93,173,Treatment effective; patient shows significant improvement.,NORMAL,✅ ALL GOOD
+1103,42,Male,80,135,103,277,"Cholesterol levels high, recommend lifestyle changes.",CONCERNING,⚠️ NURSE REVIEW
+1104,32,Female,80,140,111,296,Vitals are stable; continue current medication,NORMAL,✅ ALL GOOD
+1105,36,Male,67,111,79,284,"Patient in good health, maintain diet and exercise.",NORMAL,✅ ALL GOOD
+1106,65,Female,108,130,67,202,Treatment effective; patient shows significant improvement.,NORMAL,✅ ALL GOOD
+1107,75,Male,105,124,94,183,Vitals are stable; continue current medication,NORMAL,✅ ALL GOOD
+1108,30,Male,76,106,93,238,Routine check-up completed; no immediate concerns,NORMAL,✅ ALL GOOD
+1109,65,Male,100,153,85,264,No significant changes observed; maintain current regimen.,NORMAL,✅ ALL GOOD
+1110,62,Female,67,179,86,167,Patient is recovering well with no complications.,NORMAL,✅ ALL GOOD
+1111,43,Male,117,124,89,228,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1112,60,Male,103,161,80,182,Vitals are stable; continue current medication,NORMAL,✅ ALL GOOD
+1113,68,Male,81,103,83,281,Treatment effective; patient shows significant improvement.,NORMAL,✅ ALL GOOD
+1114,69,Female,105,169,85,212,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1115,73,Male,69,161,98,294,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1116,76,Male,109,106,101,159,Patient is recovering well with no complications.,NORMAL,✅ ALL GOOD
+1117,78,Male,112,133,83,167,Vitals are stable; continue current medication,NORMAL,✅ ALL GOOD
+1118,75,Female,96,149,95,254,"Cholesterol levels high, recommend lifestyle changes.",CONCERNING,⚠️ NURSE REVIEW
+1119,51,Male,89,169,91,274,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1120,34,Male,83,103,115,198,No significant changes observed; maintain current regimen.,NORMAL,✅ ALL GOOD
+1121,41,Male,71,120,115,229,Treatment effective; patient shows significant improvement.,NORMAL,✅ ALL GOOD
+1122,77,Male,95,177,87,194,"Cholesterol levels high, recommend lifestyle changes.",CONCERNING,⚠️ NURSE REVIEW
+1123,34,Male,81,125,88,215,Routine check-up completed; no immediate concerns,NORMAL,✅ ALL GOOD
+1124,51,Male,120,156,95,262,Patient is recovering well with no complications.,NORMAL,✅ ALL GOOD
+1125,39,Male,86,103,105,260,Vitals are stable; continue current medication,NORMAL,✅ ALL GOOD
+1126,35,Female,84,177,78,155,Patient's condition is stable; monitor regularly.,NORMAL,✅ ALL GOOD
+1127,61,Male,119,155,118,288,"Cholesterol levels high, recommend lifestyle changes.",CONCERNING,⚠️ NURSE REVIEW
+1128,69,Male,67,139,84,298,Treatment effective; patient shows significant improvement.,NORMAL,✅ ALL GOOD
+1129,69,Male,79,106,82,159,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1130,60,Female,74,117,63,253,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1131,42,Female,115,124,80,208,"Cholesterol levels high, recommend lifestyle changes.",CONCERNING,⚠️ NURSE REVIEW
+1132,74,Male,84,128,80,252,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1133,39,Male,105,113,94,285,No significant changes observed; maintain current regimen.,NORMAL,✅ ALL GOOD
+1134,38,Female,67,143,63,246,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1135,51,Male,77,145,61,187,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1136,75,Male,109,167,73,161,"Patient in good health, maintain diet and exercise.",NORMAL,✅ ALL GOOD
+1137,50,Male,70,162,75,270,"Patient in good health, maintain diet and exercise.",NORMAL,✅ ALL GOOD
+1138,54,Male,60,139,100,176,Patient's condition is stable; monitor regularly.,NORMAL,✅ ALL GOOD
+1139,52,Male,75,132,89,206,Vitals are stable; continue current medication,NORMAL,✅ ALL GOOD
+1140,63,Male,88,128,79,158,Patient is recovering well with no complications.,NORMAL,✅ ALL GOOD
+1141,62,Male,63,126,61,180,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1142,74,Female,83,117,107,175,"Cholesterol levels high, recommend lifestyle changes.",CONCERNING,⚠️ NURSE REVIEW
+1143,68,Female,72,157,117,166,Routine check-up completed; no immediate concerns,NORMAL,✅ ALL GOOD
+1144,72,Male,101,103,101,248,Treatment effective; patient shows significant improvement.,NORMAL,✅ ALL GOOD
+1145,60,Male,86,114,69,189,Patient's condition is stable; monitor regularly.,NORMAL,✅ ALL GOOD
+1146,60,Male,65,110,70,172,No significant changes observed; maintain current regimen.,NORMAL,✅ ALL GOOD
+1147,44,Male,76,147,64,295,"Cholesterol levels high, recommend lifestyle changes.",CONCERNING,⚠️ NURSE REVIEW
+1148,72,Female,80,103,88,275,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1149,56,Male,86,145,103,169,Routine check-up completed; no immediate concerns,NORMAL,✅ ALL GOOD
+1150,49,Female,70,117,108,223,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1151,31,Male,60,179,79,246,"Patient in good health, maintain diet and exercise.",NORMAL,✅ ALL GOOD
+1152,77,Female,101,152,65,211,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1153,31,Female,95,178,75,270,Vitals are stable; continue current medication,NORMAL,✅ ALL GOOD
+1154,46,Female,97,162,105,272,"Cholesterol levels high, recommend lifestyle changes.",CONCERNING,⚠️ NURSE REVIEW
+1155,51,Male,93,126,118,203,Patient is recovering well with no complications.,NORMAL,✅ ALL GOOD
+1156,72,Female,77,128,63,175,No significant changes observed; maintain current regimen.,NORMAL,✅ ALL GOOD
+1157,78,Female,66,160,62,275,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1158,74,Female,117,143,93,275,"Cholesterol levels high, recommend lifestyle changes.",CONCERNING,⚠️ NURSE REVIEW
+1159,35,Male,109,169,95,236,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1160,73,Female,112,157,104,208,Vitals are stable; continue current medication,NORMAL,✅ ALL GOOD
+1161,63,Female,111,167,113,188,Treatment effective; patient shows significant improvement.,NORMAL,✅ ALL GOOD
+1162,68,Female,111,166,69,154,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1163,44,Female,98,142,70,171,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1164,64,Female,105,162,117,254,Routine check-up completed; no immediate concerns,NORMAL,✅ ALL GOOD
+1165,38,Female,93,121,62,273,"Patient in good health, maintain diet and exercise.",NORMAL,✅ ALL GOOD
+1166,34,Male,76,160,109,182,No significant changes observed; maintain current regimen.,NORMAL,✅ ALL GOOD
+1167,68,Male,93,160,75,280,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1168,59,Female,106,119,65,282,"Patient in good health, maintain diet and exercise.",NORMAL,✅ ALL GOOD
+1169,48,Male,86,118,87,167,Patient is recovering well with no complications.,NORMAL,✅ ALL GOOD
+1170,57,Female,77,102,66,222,"Patient in good health, maintain diet and exercise.",NORMAL,✅ ALL GOOD
+1171,48,Male,87,120,84,244,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1172,78,Male,91,109,103,173,Vitals are stable; continue current medication,NORMAL,✅ ALL GOOD
+1173,46,Female,79,111,69,227,"Cholesterol levels high, recommend lifestyle changes.",CONCERNING,⚠️ NURSE REVIEW
+1174,66,Male,93,135,103,152,"Patient in good health, maintain diet and exercise.",NORMAL,✅ ALL GOOD
+1175,70,Female,109,102,73,191,Patient's condition is stable; monitor regularly.,NORMAL,✅ ALL GOOD
+1176,33,Male,110,114,119,199,Routine check-up completed; no immediate concerns,NORMAL,✅ ALL GOOD
+1177,75,Female,67,114,111,184,"Cholesterol levels high, recommend lifestyle changes.",CONCERNING,⚠️ NURSE REVIEW
+1178,69,Female,65,131,106,280,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1179,59,Female,100,136,117,187,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1180,34,Male,118,144,96,159,Routine check-up completed; no immediate concerns,NORMAL,✅ ALL GOOD
+1181,60,Male,117,171,74,202,Vitals are stable; continue current medication,NORMAL,✅ ALL GOOD
+1182,58,Male,114,142,70,170,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1183,30,Male,120,140,114,258,Treatment effective; patient shows significant improvement.,NORMAL,✅ ALL GOOD
+1184,47,Male,101,164,98,285,Patient is recovering well with no complications.,NORMAL,✅ ALL GOOD
+1185,72,Male,79,116,70,243,Patient's condition is stable; monitor regularly.,NORMAL,✅ ALL GOOD
+1186,80,Male,106,175,69,285,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1187,70,Male,60,125,85,300,Vitals are stable; continue current medication,NORMAL,✅ ALL GOOD
+1188,40,Male,95,167,95,204,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1189,34,Female,103,121,103,189,No significant changes observed; maintain current regimen.,NORMAL,✅ ALL GOOD
+1190,64,Male,80,119,61,243,"Cholesterol levels high, recommend lifestyle changes.",CONCERNING,⚠️ NURSE REVIEW
+1191,80,Male,68,152,90,196,Routine check-up completed; no immediate concerns,NORMAL,✅ ALL GOOD
+1192,77,Male,82,170,110,277,No significant changes observed; maintain current regimen.,NORMAL,✅ ALL GOOD
+1193,71,Male,119,127,113,293,"Cholesterol levels high, recommend lifestyle changes.",CONCERNING,⚠️ NURSE REVIEW
+1194,65,Male,74,117,87,206,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1195,70,Male,64,174,67,232,Patient's condition is stable; monitor regularly.,NORMAL,✅ ALL GOOD
+1196,34,Female,89,122,73,181,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1197,54,Male,70,168,84,260,"Patient in good health, maintain diet and exercise.",NORMAL,✅ ALL GOOD
+1198,37,Female,101,154,68,243,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1199,69,Female,76,159,60,161,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1200,51,Female,97,148,91,163,Routine check-up completed; no immediate concerns,NORMAL,✅ ALL GOOD
+1201,38,Male,98,175,63,232,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1202,53,Male,97,146,88,208,No significant changes observed; maintain current regimen.,NORMAL,✅ ALL GOOD
+1203,74,Female,64,146,115,190,"Patient in good health, maintain diet and exercise.",NORMAL,✅ ALL GOOD
+1204,43,Female,103,143,119,211,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1205,71,Male,105,126,102,214,Vitals are stable; continue current medication,NORMAL,✅ ALL GOOD
+1206,64,Male,64,112,107,206,Treatment effective; patient shows significant improvement.,NORMAL,✅ ALL GOOD
+1207,54,Male,81,135,100,225,Patient's condition is stable; monitor regularly.,NORMAL,✅ ALL GOOD
+1208,72,Female,82,123,70,191,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1209,62,Male,84,114,114,201,Patient is recovering well with no complications.,NORMAL,✅ ALL GOOD
+1210,43,Male,117,123,112,290,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1211,32,Female,106,159,78,248,"Cholesterol levels high, recommend lifestyle changes.",CONCERNING,⚠️ NURSE REVIEW
+1212,30,Male,67,142,99,200,Vitals are stable; continue current medication,NORMAL,✅ ALL GOOD
+1213,35,Female,106,135,119,199,Routine check-up completed; no immediate concerns,NORMAL,✅ ALL GOOD
+1214,59,Female,108,131,116,219,Patient's condition is stable; monitor regularly.,NORMAL,✅ ALL GOOD
+1215,74,Male,104,156,72,177,Routine check-up completed; no immediate concerns,NORMAL,✅ ALL GOOD
+1216,65,Female,62,163,70,220,No significant changes observed; maintain current regimen.,NORMAL,✅ ALL GOOD
+1217,64,Male,79,173,73,285,Patient's condition is stable; monitor regularly.,NORMAL,✅ ALL GOOD
+1218,54,Female,66,180,96,161,"Cholesterol levels high, recommend lifestyle changes.",CONCERNING,⚠️ NURSE REVIEW
+1219,74,Female,104,115,70,236,"Cholesterol levels high, recommend lifestyle changes.",CONCERNING,⚠️ NURSE REVIEW
+1220,52,Female,66,145,82,261,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1221,46,Female,102,170,112,170,Patient is recovering well with no complications.,NORMAL,✅ ALL GOOD
+1222,43,Female,106,143,77,228,Treatment effective; patient shows significant improvement.,NORMAL,✅ ALL GOOD
+1223,71,Female,82,107,113,269,Patient is recovering well with no complications.,NORMAL,✅ ALL GOOD
+1224,52,Female,106,149,96,296,Vitals are stable; continue current medication,NORMAL,✅ ALL GOOD
+1225,35,Female,112,115,63,267,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1226,79,Male,102,175,91,229,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1227,73,Male,107,151,84,281,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1228,52,Male,102,125,102,249,"Cholesterol levels high, recommend lifestyle changes.",CONCERNING,⚠️ NURSE REVIEW
+1229,78,Male,91,160,76,266,"Patient in good health, maintain diet and exercise.",NORMAL,✅ ALL GOOD
+1230,49,Female,95,179,68,173,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1231,71,Male,71,124,91,274,Routine check-up completed; no immediate concerns,NORMAL,✅ ALL GOOD
+1232,45,Male,81,172,117,263,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1233,40,Female,120,106,78,274,"Cholesterol levels high, recommend lifestyle changes.",CONCERNING,⚠️ NURSE REVIEW
+1234,57,Female,84,150,79,242,"Patient in good health, maintain diet and exercise.",NORMAL,✅ ALL GOOD
+1235,61,Male,106,103,67,252,"Patient in good health, maintain diet and exercise.",NORMAL,✅ ALL GOOD
+1236,78,Male,114,152,74,283,Treatment effective; patient shows significant improvement.,NORMAL,✅ ALL GOOD
+1237,54,Male,113,126,75,211,No significant changes observed; maintain current regimen.,NORMAL,✅ ALL GOOD
+1238,33,Male,62,165,66,284,Patient is recovering well with no complications.,NORMAL,✅ ALL GOOD
+1239,58,Female,114,136,112,242,"Cholesterol levels high, recommend lifestyle changes.",CONCERNING,⚠️ NURSE REVIEW
+1240,37,Male,107,142,101,235,Routine check-up completed; no immediate concerns,NORMAL,✅ ALL GOOD
+1241,47,Female,61,103,87,162,Patient's condition is stable; monitor regularly.,NORMAL,✅ ALL GOOD
+1242,54,Male,87,179,103,178,Treatment effective; patient shows significant improvement.,NORMAL,✅ ALL GOOD
+1243,68,Male,93,153,70,160,"Cholesterol levels high, recommend lifestyle changes.",CONCERNING,⚠️ NURSE REVIEW
+1244,62,Male,61,112,98,254,No significant changes observed; maintain current regimen.,NORMAL,✅ ALL GOOD
+1245,32,Female,100,128,78,281,Vitals are stable; continue current medication,NORMAL,✅ ALL GOOD
+1246,78,Male,75,109,85,249,"Severe chest pain reported, possible cardiac arrest risk",EMERGENCY,🚨 CALL DOCTOR NOW
+1247,48,Female,76,172,82,218,"Patient in good health, maintain diet and exercise.",NORMAL,✅ ALL GOOD
+1248,64,Male,110,157,77,165,"Cholesterol levels high, recommend lifestyle changes.",CONCERNING,⚠️ NURSE REVIEW
+1249,62,Female,117,175,116,203,Routine check-up completed; no immediate concerns,NORMAL,✅ ALL GOOD
+1250,65,Male,108,145,71,264,Patient's condition is stable; monitor regularly.,NORMAL,✅ ALL GOOD

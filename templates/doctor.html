@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CardioSense — Doctor Panel</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f5f7ff;--bg2:#eef1fb;--white:#ffffff;
+  --dark:#1a2040;--gray:#64748b;
+  --border:#dde3f5;--border2:#c8d0ee;
+  --green:#059669;--green-bg:#ecfdf5;--green-border:#6ee7b7;
+  --yellow:#d97706;--yellow-bg:#fffbeb;--yellow-border:#fcd34d;
+  --red:#dc2626;--red-bg:#fff5f5;--red-border:#fca5a5;
+  --blue:#2563eb;--blue-bg:#eff6ff;--blue-border:#93c5fd;
+  --purple:#7c3aed;--purple-bg:#f5f3ff;--purple-border:#c4b5fd;
+  --sans:'Nunito',sans-serif;--mono:'JetBrains Mono',monospace;
+  --shadow:0 2px 20px rgba(30,50,120,0.08);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);font-family:var(--sans);color:var(--dark);height:100vh;overflow:hidden;}
+
+/* HEADER */
+.header{
+  background:var(--white);border-bottom:2px solid var(--border);
+  height:68px;padding:0 28px;
+  display:flex;align-items:center;justify-content:space-between;
+  box-shadow:0 2px 12px rgba(30,50,120,0.06);
+  flex-shrink:0;position:relative;z-index:100;
+}
+.brand{display:flex;align-items:center;gap:14px;}
+.brand-logo{
+  width:42px;height:42px;
+  background:linear-gradient(135deg,#dc2626,#f97316);
+  border-radius:12px;display:flex;align-items:center;
+  justify-content:center;font-size:20px;
+  box-shadow:0 4px 14px rgba(220,38,38,0.25);
+}
+.brand-name{font-size:20px;font-weight:900;color:var(--dark);letter-spacing:-0.5px;}
+.brand-sub{font-size:11px;color:var(--gray);margin-top:1px;font-weight:600;}
+.hdr-right{display:flex;align-items:center;gap:14px;}
+.clock{font-family:var(--mono);font-size:13px;color:var(--gray);background:var(--bg2);border:1px solid var(--border);padding:8px 14px;border-radius:10px;font-weight:500;}
+.doc-chip{
+  display:flex;align-items:center;gap:10px;
+  background:var(--blue-bg);border:2px solid var(--blue-border);
+  border-radius:10px;padding:8px 16px;
+  font-size:13px;font-weight:800;color:var(--blue);
+}
+.doc-av{
+  width:28px;height:28px;
+  background:linear-gradient(135deg,var(--blue),var(--purple));
+  border-radius:8px;display:flex;align-items:center;
+  justify-content:center;font-size:11px;font-weight:900;color:white;
+}
+
+/* LAYOUT */
+.layout{display:grid;grid-template-columns:300px 1fr;height:calc(100vh - 68px);}
+
+/* LEFT */
+.left{background:var(--white);border-right:2px solid var(--border);display:flex;flex-direction:column;overflow:hidden;}
+.left-top{padding:16px 18px;border-bottom:2px solid var(--border);flex-shrink:0;}
+.left-title{font-size:14px;font-weight:900;color:var(--dark);margin-bottom:12px;display:flex;align-items:center;justify-content:space-between;}
+.left-title span{font-family:var(--mono);font-size:10px;color:var(--gray);font-weight:600;}
+.search-box{
+  width:100%;background:var(--bg);border:2px solid var(--border);
+  border-radius:10px;padding:10px 14px;font-family:var(--sans);
+  font-size:13px;color:var(--dark);outline:none;
+  font-weight:600;transition:all 0.2s;
+}
+.search-box:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,0.08);}
+.search-box::placeholder{color:var(--gray);}
+.filter-tabs{display:flex;gap:6px;margin-top:10px;}
+.ftab{
+  flex:1;padding:7px 4px;border-radius:8px;
+  font-size:11px;font-weight:800;cursor:pointer;
+  border:2px solid var(--border);
+  background:var(--bg);color:var(--gray);
+  font-family:var(--sans);text-align:center;transition:all 0.15s;
+}
+.ftab.fa.on{background:var(--dark);color:white;border-color:var(--dark);}
+.ftab.fe.on{background:var(--red-bg);color:var(--red);border-color:var(--red-border);}
+.ftab.fc.on{background:var(--yellow-bg);color:var(--yellow);border-color:var(--yellow-border);}
+.ftab.fn.on{background:var(--green-bg);color:var(--green);border-color:var(--green-border);}
+
+/* STATS */
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:12px 18px;border-bottom:2px solid var(--border);flex-shrink:0;}
+.sm{background:var(--bg);border-radius:10px;padding:10px;text-align:center;border:2px solid var(--border);}
+.sm-num{font-family:var(--mono);font-size:18px;font-weight:800;}
+.sm-lbl{font-size:9px;color:var(--gray);margin-top:2px;text-transform:uppercase;letter-spacing:0.5px;font-weight:700;}
+
+/* PATIENT LIST */
+.pat-list{flex:1;overflow-y:auto;padding:10px;}
+.pat-list::-webkit-scrollbar{width:4px;}
+.pat-list::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px;}
+.pat-item{
+  display:flex;align-items:center;gap:12px;
+  padding:12px 14px;border-radius:12px;cursor:pointer;
+  border:2px solid transparent;margin-bottom:6px;
+  transition:all 0.15s;
+  border-left:3px solid transparent;
+}
+.pat-item:hover{background:var(--bg2);}
+.pat-item.active{background:var(--blue-bg);border-color:var(--blue-border);}
+.pat-item.EMERGENCY{border-left-color:var(--red);}
+.pat-item.CONCERNING{border-left-color:var(--yellow);}
+.pat-item.NORMAL{border-left-color:var(--green);}
+.pi-av{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;flex-shrink:0;}
+.pi-id{font-size:13px;font-weight:800;color:var(--dark);}
+.pi-meta{font-size:11px;color:var(--gray);margin-top:1px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:160px;}
+.pi-badge{font-size:9px;font-weight:800;padding:3px 8px;border-radius:5px;margin-left:auto;flex-shrink:0;}
+.pb-EMERGENCY{background:var(--red-bg);color:var(--red);border:1.5px solid var(--red-border);}
+.pb-CONCERNING{background:var(--yellow-bg);color:var(--yellow);border:1.5px solid var(--yellow-border);}
+.pb-NORMAL{background:var(--green-bg);color:var(--green);border:1.5px solid var(--green-border);}
+.sos-dot{width:8px;height:8px;background:var(--red);border-radius:50%;flex-shrink:0;animation:sosPulse 1s infinite;}
+@keyframes sosPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.3;transform:scale(1.6)}}
+
+/* RIGHT */
+.right{display:flex;flex-direction:column;overflow:hidden;background:var(--bg);}
+.right-empty{
+  flex:1;display:flex;align-items:center;justify-content:center;
+  flex-direction:column;gap:14px;color:var(--gray);
+}
+.right-empty-icon{font-size:52px;opacity:0.2;}
+
+/* DETAIL HEADER */
+.detail-hdr{
+  background:var(--white);border-bottom:2px solid var(--border);
+  padding:16px 24px;display:flex;align-items:center;gap:16px;
+  flex-shrink:0;box-shadow:0 2px 8px rgba(30,50,120,0.04);
+}
+.dh-av{width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:900;flex-shrink:0;}
+.dh-id{font-size:16px;font-weight:900;color:var(--dark);}
+.dh-meta{font-size:11px;color:var(--gray);margin-top:3px;font-weight:600;}
+.dh-badge{font-size:11px;font-weight:800;padding:6px 14px;border-radius:8px;margin-left:auto;}
+.db-EMERGENCY{background:var(--red-bg);color:var(--red);border:2px solid var(--red-border);}
+.db-CONCERNING{background:var(--yellow-bg);color:var(--yellow);border:2px solid var(--yellow-border);}
+.db-NORMAL{background:var(--green-bg);color:var(--green);border:2px solid var(--green-border);}
+
+/* VITALS BAR */
+.vitals-bar{
+  background:var(--white);border-bottom:2px solid var(--border);
+  padding:12px 24px;display:flex;gap:28px;flex-shrink:0;
+}
+.vb-val{font-family:var(--mono);font-size:15px;font-weight:800;}
+.vb-lbl{font-size:9px;color:var(--gray);text-transform:uppercase;letter-spacing:1px;margin-top:2px;font-weight:700;}
+
+/* CHAT THREAD */
+.chat-thread{
+  flex:1;overflow-y:auto;padding:20px 24px;
+  display:flex;flex-direction:column;gap:16px;
+  background:var(--bg);
+}
+.chat-thread::-webkit-scrollbar{width:4px;}
+.chat-thread::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px;}
+
+/* LEFT — patient message received */
+.msg-left{align-self:flex-start;max-width:76%;}
+.msg-left-name{font-size:11px;font-weight:800;margin-bottom:6px;text-transform:uppercase;letter-spacing:0.5px;}
+.pat-lbl{color:var(--blue);}
+.sys-lbl{color:var(--gray);}
+.msg-left-bubble{border-radius:4px 18px 18px 18px;padding:13px 16px;font-size:14px;line-height:1.7;font-weight:500;}
+.pat-bub-NORMAL{background:var(--green-bg);border:2px solid var(--green-border);}
+.pat-bub-CONCERNING{background:var(--yellow-bg);border:2px solid var(--yellow-border);}
+.pat-bub-EMERGENCY{background:var(--red-bg);border:2px solid var(--red-border);}
+.sys-bub{background:var(--white);border:2px solid var(--border2);}
+.msg-time-l{font-size:10px;color:var(--gray);font-family:var(--mono);margin-top:5px;font-weight:500;}
+.atags{display:flex;gap:6px;margin-top:5px;flex-wrap:wrap;}
+.atag{font-size:10px;font-family:var(--mono);padding:3px 8px;border-radius:5px;font-weight:700;}
+.at-NORMAL{background:var(--green-bg);color:var(--green);border:1px solid var(--green-border);}
+.at-CONCERNING{background:var(--yellow-bg);color:var(--yellow);border:1px solid var(--yellow-border);}
+.at-EMERGENCY{background:var(--red-bg);color:var(--red);border:1px solid var(--red-border);}
+.at-info{background:var(--bg2);color:var(--gray);border:1px solid var(--border2);}
+
+/* RIGHT — doctor reply sent */
+.msg-right{align-self:flex-end;max-width:76%;}
+.msg-right-name{font-size:11px;font-weight:800;color:var(--purple);margin-bottom:6px;text-align:right;text-transform:uppercase;letter-spacing:0.5px;}
+.msg-right-bubble{border-radius:18px 4px 18px 18px;padding:13px 16px;font-size:14px;line-height:1.7;font-weight:500;background:var(--purple-bg);border:2px solid var(--purple-border);}
+.msg-time-r{font-size:10px;color:var(--gray);font-family:var(--mono);margin-top:5px;text-align:right;font-weight:500;}
+
+.no-msg{text-align:center;padding:30px;color:var(--gray);font-size:14px;font-weight:600;line-height:1.7;}
+
+/* REPLY WRAP */
+.reply-wrap{
+  background:var(--white);border-top:2px solid var(--border);
+  padding:16px 24px;flex-shrink:0;
+  box-shadow:0 -2px 10px rgba(30,50,120,0.04);
+}
+.reply-label{font-size:11px;font-weight:800;color:var(--gray);margin-bottom:10px;display:flex;align-items:center;gap:6px;text-transform:uppercase;letter-spacing:0.5px;}
+.reply-label span{color:var(--blue);font-family:var(--mono);}
+.reply-row{display:flex;gap:12px;}
+.reply-textarea{
+  flex:1;background:var(--bg);border:2px solid var(--border);
+  border-radius:12px;padding:12px 16px;font-family:var(--sans);
+  font-size:14px;color:var(--dark);outline:none;resize:none;
+  height:56px;line-height:1.5;font-weight:500;transition:all 0.2s;
+}
+.reply-textarea:focus{border-color:var(--purple);box-shadow:0 0 0 3px rgba(124,58,237,0.08);}
+.reply-textarea::placeholder{color:var(--gray);}
+.btn-reply{
+  background:linear-gradient(135deg,var(--purple),#6d28d9);
+  color:white;border:none;border-radius:12px;
+  padding:0 24px;font-family:var(--sans);
+  font-size:13px;font-weight:800;cursor:pointer;
+  white-space:nowrap;letter-spacing:0.3px;
+  transition:all 0.2s;
+  box-shadow:0 4px 14px rgba(124,58,237,0.3);
+}
+.btn-reply:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(124,58,237,0.4);}
+
+.spinner{width:28px;height:28px;border:3px solid var(--border2);border-top-color:var(--blue);border-radius:50%;animation:spin 0.7s linear infinite;margin:28px auto;}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.toast{
+  position:fixed;bottom:24px;right:24px;
+  background:var(--dark);color:white;
+  border-radius:12px;padding:14px 20px;
+  font-size:13px;font-weight:700;z-index:9999;
+  transform:translateY(80px);opacity:0;transition:all 0.3s;
+  box-shadow:var(--shadow);
+}
+.toast.show{transform:translateY(0);opacity:1;}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="brand">
+    <div class="brand-logo">🫀</div>
+    <div>
+      <div class="brand-name">CardioSense</div>
+      <div class="brand-sub">Doctor Monitoring Panel</div>
+    </div>
+  </div>
+  <div class="hdr-right">
+    <div class="clock" id="clock">--:--:--</div>
+    <div class="doc-chip">
+      <div class="doc-av">DR</div>
+      Dr. Arjun Kumar — Cardiologist
+    </div>
+  </div>
+</div>
+
+<div class="layout">
+
+  <!-- LEFT -->
+  <div class="left">
+    <div class="left-top">
+      <div class="left-title">All Patients <span id="totalCount">0 total</span></div>
+      <input class="search-box" id="searchBox" placeholder="🔍  Search Patient ID..." oninput="applyFilter()">
+      <div class="filter-tabs">
+        <div class="ftab fa on" onclick="setFilter('all',this)">All</div>
+        <div class="ftab fe"   onclick="setFilter('EMERGENCY',this)">🔴 SOS</div>
+        <div class="ftab fc"   onclick="setFilter('CONCERNING',this)">🟡 Watch</div>
+        <div class="ftab fn"   onclick="setFilter('NORMAL',this)">🟢 OK</div>
+      </div>
+    </div>
+
+    <div class="stats-row">
+      <div class="sm"><div class="sm-num" style="color:var(--red)"    id="sEm">0</div><div class="sm-lbl">Emergency</div></div>
+      <div class="sm"><div class="sm-num" style="color:var(--yellow)" id="sCo">0</div><div class="sm-lbl">Concerning</div></div>
+      <div class="sm"><div class="sm-num" style="color:var(--green)"  id="sNo">0</div><div class="sm-lbl">Normal</div></div>
+    </div>
+
+    <div class="pat-list" id="patList"><div class="spinner"></div></div>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="right" id="rightPanel">
+    <div class="right-empty">
+      <div class="right-empty-icon">🫀</div>
+      <div style="font-size:16px;font-weight:900;color:var(--dark)">Select a Patient</div>
+      <div style="font-size:13px;font-weight:600;text-align:center;line-height:1.7">Click any patient on the left<br>to view their SMS conversation</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+let allPatients   = [];
+let currentFilter = 'all';
+let selectedPid   = null;
+
+setInterval(() => {
+  document.getElementById('clock').textContent =
+    new Date().toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
+}, 1000);
+
+async function loadPatients() {
+  try {
+    const res = await fetch('/api/patients');
+    allPatients = await res.json();
+    document.getElementById('sEm').textContent = allPatients.filter(p=>p.status==='EMERGENCY').length;
+    document.getElementById('sCo').textContent = allPatients.filter(p=>p.status==='CONCERNING').length;
+    document.getElementById('sNo').textContent = allPatients.filter(p=>p.status==='NORMAL').length;
+    document.getElementById('totalCount').textContent = allPatients.length + ' total';
+    renderList(allPatients);
+
+    if (!selectedPid && window.location.hash) {
+      const hashStr = window.location.hash.substring(1);
+      const p = allPatients.find(x => x.patient_id === hashStr);
+      if (p) selectPatient(p);
+    } else if (selectedPid) {
+      loadThread(selectedPid);
+    }
+  } catch(e) { console.error(e); }
+}
+
+function renderList(data) {
+  const list = document.getElementById('patList');
+  if (!data.length) { list.innerHTML = '<div class="no-msg">No patients found</div>'; return; }
+  list.innerHTML = '';
+  data.forEach(p => {
+    const avBg    = p.status==='EMERGENCY'?'#fee2e2':p.status==='CONCERNING'?'#fef3c7':'#dcfce7';
+    const avColor = p.status==='EMERGENCY'?'#dc2626':p.status==='CONCERNING'?'#d97706':'#059669';
+    const item = document.createElement('div');
+    item.className = 'pat-item ' + p.status + (selectedPid===p.patient_id?' active':'');
+    item.onclick = () => selectPatient(p);
+    item.innerHTML =
+      '<div class="pi-av" style="background:' + avBg + ';color:' + avColor + '">' + (p.gender==='Female'?'F':'M') + '</div>' +
+      '<div style="flex:1;min-width:0">' +
+        '<div class="pi-id">' + p.patient_id + '</div>' +
+        '<div class="pi-meta">Age ' + p.age + ' · ' + (p.last_sms||'No SMS').substring(0,22) + '...</div>' +
+      '</div>' +
+      '<span class="pi-badge pb-' + p.status + '">' + p.status + '</span>' +
+      (p.status==='EMERGENCY'?'<div class="sos-dot"></div>':'');
+    list.appendChild(item);
+  });
+}
+
+function setFilter(type, el) {
+  document.querySelectorAll('.ftab').forEach(t=>t.classList.remove('on'));
+  el.classList.add('on'); currentFilter = type; applyFilter();
+}
+function applyFilter() {
+  const q = document.getElementById('searchBox').value.toLowerCase();
+  let d = currentFilter==='all' ? allPatients : allPatients.filter(p=>p.status===currentFilter);
+  if (q) d = d.filter(p=>p.patient_id.toLowerCase().includes(q));
+  renderList(d);
+}
+
+function selectPatient(p) {
+  selectedPid = p.patient_id;
+  window.history.replaceState(null, null, '#' + p.patient_id);
+  applyFilter();
+  buildRight(p);
+  loadThread(p.patient_id);
+}
+
+function buildRight(p) {
+  const hrC  = p.heart_rate>90?'var(--red)':p.heart_rate>80?'var(--yellow)':'var(--green)';
+  const bpC  = p.bp_systolic>145?'var(--red)':p.bp_systolic>130?'var(--yellow)':'var(--green)';
+  const chC  = p.cholesterol>240?'var(--red)':p.cholesterol>200?'var(--yellow)':'var(--green)';
+  const avBg = p.status==='EMERGENCY'?'#fee2e2':p.status==='CONCERNING'?'#fef3c7':'#dcfce7';
+  const avColor = p.status==='EMERGENCY'?'#dc2626':p.status==='CONCERNING'?'#d97706':'#059669';
+
+  document.getElementById('rightPanel').innerHTML =
+    '<div class="detail-hdr">' +
+      '<div class="dh-av" style="background:' + avBg + ';color:' + avColor + '">' + (p.gender==='Female'?'F':'M') + '</div>' +
+      '<div><div class="dh-id">' + p.patient_id + '</div>' +
+      '<div class="dh-meta">Age ' + p.age + ' · ' + p.gender + ' · Risk ' + p.risk_score + '% · Alert: ' + (p.alert_level||p.status) + '</div></div>' +
+      '<span class="dh-badge db-' + p.status + '">' + p.status + '</span>' +
+    '</div>' +
+    '<div class="vitals-bar">' +
+      '<div><div class="vb-val" style="color:' + hrC + '">' + p.heart_rate + '</div><div class="vb-lbl">Heart Rate</div></div>' +
+      '<div><div class="vb-val" style="color:' + bpC + '">' + p.bp_systolic + '/' + p.bp_diastolic + '</div><div class="vb-lbl">Blood Pressure</div></div>' +
+      '<div><div class="vb-val" style="color:' + chC + '">' + p.cholesterol + '</div><div class="vb-lbl">Cholesterol</div></div>' +
+      '<div><div class="vb-val" style="color:' + (p.risk_score>70?'var(--red)':p.risk_score>40?'var(--yellow)':'var(--green)') + '">' + p.risk_score + '%</div><div class="vb-lbl">Risk Score</div></div>' +
+    '</div>' +
+    '<div class="chat-thread" id="chatThread"><div class="spinner"></div></div>' +
+    '<div class="reply-wrap">' +
+      '<div class="reply-label">Replying to patient: <span>' + p.patient_id + '</span> — Patient sees instantly</div>' +
+      '<div class="reply-row">' +
+        '<textarea class="reply-textarea" id="drBox" placeholder="Type your medical advice or reply to patient..."></textarea>' +
+        '<button class="btn-reply" onclick="sendReply(\'' + p.patient_id + '\')">Send Reply</button>' +
+      '</div>' +
+    '</div>';
+}
+
+async function loadThread(pid) {
+  const thread = document.getElementById('chatThread');
+  if (!thread) return;
+  try {
+    const [smsRes, docRes] = await Promise.all([fetch('/api/sms/'+pid), fetch('/api/doctor-reply/'+pid)]);
+    const smsList = await smsRes.json();
+    const docList = await docRes.json();
+    thread.innerHTML = '';
+
+    const now = new Date().toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit'});
+    thread.innerHTML +=
+      '<div class="msg-left"><div class="msg-left-name sys-lbl">🏥 System</div>' +
+      '<div class="msg-left-bubble sys-bub">Daily health check sent to patient. Awaiting reply.</div>' +
+      '<div class="msg-time-l">' + now + '</div></div>';
+
+    if (!smsList.length) {
+      thread.innerHTML += '<div class="no-msg">No SMS replies from this patient yet</div>';
+      thread.scrollTop = thread.scrollHeight; return;
+    }
+
+    const all = [];
+    smsList.forEach(s => all.push({type:'patient', data:s, ts:new Date(s.timestamp)}));
+    docList.forEach(d => all.push({type:'doctor',  data:d, ts:new Date(d.timestamp)}));
+    all.sort((a,b) => a.ts - b.ts);
+
+    all.forEach(m => {
+      if (m.type === 'patient') {
+        const s  = m.data;
+        const ts = new Date(s.timestamp).toLocaleString('en-IN',{day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit'});
+        thread.innerHTML +=
+          '<div class="msg-left">' +
+          '<div class="msg-left-name pat-lbl">👤 ' + pid + ' (Patient)</div>' +
+          '<div class="msg-left-bubble pat-bub-' + s.final_label + '">' + s.message + '</div>' +
+          '<div class="atags">' +
+          '<span class="atag at-' + s.final_label + '">' + s.final_label + '</span>' +
+          '<span class="atag at-info">Lexicon: ' + s.lexicon_score + '</span>' +
+          '<span class="atag at-info">NB: ' + s.nb_label + ' (' + Math.round(s.nb_confidence) + '%)</span></div>' +
+          '<div class="msg-time-l">' + ts + '</div></div>';
+      } else {
+        const d  = m.data;
+        const ts = new Date(d.timestamp).toLocaleString('en-IN',{day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit'});
+        thread.innerHTML +=
+          '<div class="msg-right">' +
+          '<div class="msg-right-name">👨‍⚕️ Dr. Arjun Kumar (You)</div>' +
+          '<div class="msg-right-bubble">' + d.note + '</div>' +
+          '<div class="msg-time-r">' + ts + '</div></div>';
+      }
+    });
+    thread.scrollTop = thread.scrollHeight;
+  } catch(e) { console.error(e); }
+}
+
+async function sendReply(pid) {
+  const box = document.getElementById('drBox');
+  const msg = box.value.trim();
+  if (!msg) return;
+  try {
+    await fetch('/api/doctor-reply', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({patient_id:pid, note:msg})
+    });
+    box.value = '';
+    showToast('✅ Reply sent to ' + pid + ' successfully!');
+    setTimeout(() => loadThread(pid), 300);
+  } catch(e) { console.error(e); }
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3000);
+}
+
+loadPatients();
+setInterval(loadPatients, 15000);
+</script>
+</body>
+</html>
